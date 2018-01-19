@@ -85,7 +85,7 @@ addToCart('smiles');
 console.log(cart);
 console.log(cart.length);
 console.log(total());
-console.log(Object.keys(cart['apple']))
+console.log(Object.keys('apple'[0]))
 removeFromCart('love');
 console.log(cart);
 removeFromCart('smiles')
