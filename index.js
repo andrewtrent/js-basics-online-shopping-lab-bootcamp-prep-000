@@ -57,10 +57,8 @@ function total() {
 function removeFromCart(item) {
   for(var i = 0; i <= cart.length - 1; i++){
     if (cart[i].hasOwnProperty(item)){
-      var ind = i
-      return ind
+      removeFromCart.ind = i;
     }
-    return ind
   }
   
   if (ind === undefined){
@@ -70,6 +68,7 @@ function removeFromCart(item) {
     var firArr = cart.slice(0, ind) 
     var secArr = cart.slice(ind + 1);
     var newCart = [...firArr, ...secArr]
+    console.log
     setCart(newCart);
   } else if(ind === cart.length - 1){
     cart.pop()
