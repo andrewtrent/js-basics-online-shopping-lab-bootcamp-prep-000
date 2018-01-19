@@ -55,7 +55,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for(var i = 0; i < cart.length - 1; i++){
+  for(var i = 0; i <= cart.length - 1; i++){
     if (Object.keys(cart[i]) === item){
       var ind = i
       return ind
@@ -66,7 +66,7 @@ function removeFromCart(item) {
     console.log(`That item is not in your cart.`);
   } else if(ind < cart.length - 1){
     var newCart = 
-    [...cart.slice(0, Object.keys(cart[item])) , ...cart.slice(Object.keys(cart[item][0]+ 1))];
+    [...cart.slice(0, ind, ...cart.slice(ind + 1))];
     setCart(newCart);
   } else if(ind === cart.length - 1){
     cart.pop()
