@@ -54,6 +54,26 @@ function total() {
   return totalPrice
 }
 
+function removeFromCart(item) {
+  if (cart[item][0] === undefined){
+    console.log(`That item is not in your cart.`);
+  } else{
+    var newCart = 
+    [...cart.slice(0, Object.keys(cart[item])) , ...cart.slice(Object.keys(cart[item][0]+ 1))];
+    setCart(newCart);
+  }
+  return cart; 
+}
+
+function placeOrder(cardNumber) {
+  if(cardNumber === undefined){
+    console.log(`Sorry, we don't have a credit card on file for you.`);
+  } else{
+    console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`)
+    setCart([])
+  }
+}
+
 addToCart('apple');
 addToCart('spring');
 addToCart('love');
