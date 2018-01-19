@@ -86,5 +86,5 @@ console.log(cart.length);
 console.log(total());
 removeFromCart('love');
 console.log(cart);
-removeFromCart
+removeFromCart('smiles')
 viewCart()
