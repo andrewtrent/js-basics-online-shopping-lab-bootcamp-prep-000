@@ -60,6 +60,7 @@ function removeFromCart(item) {
       var ind = i
       return ind
     }
+    return ind
   }
   
   if (ind === undefined){
