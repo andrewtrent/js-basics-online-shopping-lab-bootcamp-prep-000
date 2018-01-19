@@ -57,10 +57,12 @@ function total() {
 function removeFromCart(item) {
   if (cart[item] === undefined){
     console.log(`That item is not in your cart.`);
-  } else{
+  } else if(Object.keys(cart[item]) < cart.length - 1){
     var newCart = 
     [...cart.slice(0, Object.keys(cart[item])) , ...cart.slice(Object.keys(cart[item][0]+ 1))];
     setCart(newCart);
+  } else if(Object.keys(cart[item]) === cart.length - 1){
+    cart.pop()
   }
   return cart; 
 }
@@ -77,8 +79,12 @@ function placeOrder(cardNumber) {
 addToCart('apple');
 addToCart('spring');
 addToCart('love');
-console.log(cart)
-console.log(cart.length)
-console.log(total())
-
+addToCart('spice');
+addToCart('smiles');
+console.log(cart);
+console.log(cart.length);
+console.log(total());
+removeFromCart('love');
+console.log(cart);
+removeFromCart
 viewCart()
