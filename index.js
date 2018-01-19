@@ -55,7 +55,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (cart[item][0] === undefined){
+  if (cart[item] === undefined){
     console.log(`That item is not in your cart.`);
   } else{
     var newCart = 
