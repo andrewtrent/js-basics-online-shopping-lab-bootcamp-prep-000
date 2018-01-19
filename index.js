@@ -58,12 +58,11 @@ function removeFromCart(item) {
   for(var i = 0; i < cart.length - 1; i++){
     if (Object.keys(cart[i]) === item){
       var ind = i
-      return true
-    } 
+      return ind
+    }
   }
   
-  
-  if (false){
+  if (ind === undefined){
     console.log(`That item is not in your cart.`);
   } else if(Object.keys(cart[item]) < cart.length - 1){
     var newCart = 
