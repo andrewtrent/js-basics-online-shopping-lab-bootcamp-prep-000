@@ -66,8 +66,8 @@ function removeFromCart(item) {
   if (ind === undefined){
     console.log(`That item is not in your cart.`);
   } else if(ind < cart.length - 1){
-    var newCart = 
-    [...cart.slice(0, ind), ...cart.slice(ind + 1))];
+    
+    var firArr = ...cart.slice(0, ind), ...cart.slice(ind + 1));
     setCart(newCart);
   } else if(ind === cart.length - 1){
     cart.pop()
