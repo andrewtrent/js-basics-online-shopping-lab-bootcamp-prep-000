@@ -48,7 +48,7 @@ function total() {
   var totalPrice = 0
   for(var i = 0; i + 1 <= cart.length; i++){
     if(i + 1 <= cart.length){
-      totalPrice = totalPrice + Object.values(cart[i])
+      totalPrice = totalPrice + parseInt(Object.values(cart[i]))
     }
   }
   return totalPrice
